@@ -1561,13 +1561,23 @@ Public Class TabControl
         pnlTabs.SuspendLayout()
         If Items.Count = 0 Then Exit Sub
         Dim x As Integer = LeftOffset
-        For i As Integer = 0 To Items.Count - 1
+        'For i As Integer = 0 To Items.Count - 1
+        For i As Integer = Items.Count - 1 To 0 Step -1
+            'Items(i).TabVisible = x + Items(i).Width < pnlControls.Left
             Items(i).TabVisible = x + Items(i).Width < pnlControls.Left
+            'If Items(i).IsSelected And Not Items(i).TabVisible Then
             If Items(i).IsSelected And Not Items(i).TabVisible Then
+                'SelectItem(Items(i))
                 SelectItem(Items(i))
+                'Exit Sub
                 Exit Sub
+                'End If
             End If
-            Items(i).TabLeft = x
+            If Me.RightToLeft = False Then 'Check if the control is RTL
+                Items(i).TabLeft = x 'Original Line
+            Else
+                Items(i).TabLeft = pnlControls.Left - x - Items(i).Width ' RTL Line
+            End If
             x += Items(i).Width + m_TabOffset - 1
             'This is my code for a new tab button... hope it works
             If x < pnlControls.Location.X Then
