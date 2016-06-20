@@ -23,13 +23,13 @@ Partial Class TabControl
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TabControl))
         Me.pnlTop = New System.Windows.Forms.Panel()
         Me.pnlControls = New System.Windows.Forms.Panel()
-        Me.DropButton = New MdiTabControl.ControlButton()
-        Me.CloseButton = New MdiTabControl.ControlButton()
         Me.pnlTabs = New System.Windows.Forms.Panel()
         Me.TabButton1 = New System.Windows.Forms.Button()
         Me.pnlBottom = New System.Windows.Forms.Panel()
         Me.WinMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.TabToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DropButton = New MdiTabControl.ControlButton()
+        Me.CloseButton = New MdiTabControl.ControlButton()
         Me.pnlTop.SuspendLayout()
         Me.pnlControls.SuspendLayout()
         Me.pnlTabs.SuspendLayout()
@@ -57,26 +57,6 @@ Partial Class TabControl
         Me.pnlControls.Name = "pnlControls"
         Me.pnlControls.Size = New System.Drawing.Size(25, 30)
         Me.pnlControls.TabIndex = 1
-        '
-        'DropButton
-        '
-        Me.DropButton.BackColor = System.Drawing.Color.Transparent
-        Me.DropButton.Location = New System.Drawing.Point(4, 8)
-        Me.DropButton.Name = "DropButton"
-        Me.DropButton.Size = New System.Drawing.Size(17, 15)
-        Me.DropButton.Style = MdiTabControl.ControlButton.ButtonStyle.Drop
-        Me.DropButton.TabIndex = 0
-        '
-        'CloseButton
-        '
-        Me.CloseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CloseButton.BackColor = System.Drawing.Color.Transparent
-        Me.CloseButton.Location = New System.Drawing.Point(4, 8)
-        Me.CloseButton.Name = "CloseButton"
-        Me.CloseButton.Size = New System.Drawing.Size(17, 15)
-        Me.CloseButton.Style = MdiTabControl.ControlButton.ButtonStyle.Close
-        Me.CloseButton.TabIndex = 0
-        Me.CloseButton.Visible = False
         '
         'pnlTabs
         '
@@ -114,6 +94,26 @@ Partial Class TabControl
         '
         Me.WinMenu.Name = "WinMenu"
         Me.WinMenu.Size = New System.Drawing.Size(61, 4)
+        '
+        'DropButton
+        '
+        Me.DropButton.BackColor = System.Drawing.Color.Transparent
+        Me.DropButton.Location = New System.Drawing.Point(4, 8)
+        Me.DropButton.Name = "DropButton"
+        Me.DropButton.Size = New System.Drawing.Size(17, 15)
+        Me.DropButton.Style = MdiTabControl.ControlButton.ButtonStyle.Drop
+        Me.DropButton.TabIndex = 0
+        '
+        'CloseButton
+        '
+        Me.CloseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CloseButton.BackColor = System.Drawing.Color.Transparent
+        Me.CloseButton.Location = New System.Drawing.Point(4, 8)
+        Me.CloseButton.Name = "CloseButton"
+        Me.CloseButton.Size = New System.Drawing.Size(17, 15)
+        Me.CloseButton.Style = MdiTabControl.ControlButton.ButtonStyle.Close
+        Me.CloseButton.TabIndex = 0
+        Me.CloseButton.Visible = False
         '
         'TabControl
         '

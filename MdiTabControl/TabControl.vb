@@ -494,6 +494,8 @@ Public Class TabControl
     Private m_Focused As Boolean
     'This will be used to set the button that the plus button calls
     Private m_PlusButtonSource As Button
+    Private m_PlusButtonImage As Image
+    Private m_PlusButtonVisable As Boolean = True
 
     Friend Shadows ReadOnly defaultPadding As Padding = New Padding(0, 0, 0, 0)
     Friend ReadOnly defaultBackLowColor As Color = SystemColors.ControlLightLight
@@ -1484,10 +1486,34 @@ Public Class TabControl
     <Browsable(True), Category("Behavior"), Description("The button that will be controled by the tabcontrol plus button.")>
     Public Property TabPlusButton() As Button
         Get
+            'This returns the m_PlusButtonSource button value
             Return m_PlusButtonSource
         End Get
         Set(ByVal value As Button)
+            'This will set the value of the m_PlusButtonSource button to the value of the button linked by the user/developer
             m_PlusButtonSource = value
+        End Set
+    End Property
+
+    'This gives the user/developer more control in relation to the appearance of the plus button
+    <Browsable(True), Category("Appearance"), Description("The image displayed on the plus button.")>
+    Public Property TabPlusImage() As Image
+        Get
+            Return m_PlusButtonImage
+        End Get
+        Set(ByVal value As Image)
+            m_PlusButtonImage = value
+        End Set
+    End Property
+
+    'This allows the user/developer to choose weather or not they want to display the plus button
+    <Browsable(True), Category("Appearance"), Description("Determines weather or not the Tab Plus Button is visable.")>
+    Public Property TabPlusVisable() As Boolean
+        Get
+            Return m_PlusButtonVisable
+        End Get
+        Set(ByVal value As Boolean)
+            m_PlusButtonVisable = value
         End Set
     End Property
 
@@ -1735,10 +1761,19 @@ Public Class TabControl
 
 #Region "Keyboard Handler"
 
-    Private Sub TabControl_Load(ByVal sender As Object, _
+    Private Sub TabControl_Load(ByVal sender As Object,
         ByVal e As System.EventArgs) Handles Me.Load
         Me.ParentForm.KeyPreview = True
         AddHandler Me.ParentForm.KeyDown, AddressOf Owner_KeyDown
+        'My code for personalization of the Plus Button
+        If m_PlusButtonVisable = False Then
+            TabButton1.Visible = False
+        End If
+        If m_PlusButtonImage Is Nothing Then
+
+        Else
+            TabButton1.BackgroundImage = m_PlusButtonImage
+        End If
     End Sub
 
     Private m_KeyCloseEnabled As Boolean = True
@@ -1859,8 +1894,8 @@ Public Class TabControl
     '(c)Copyright Josiah Horton 2016
 
     Private Sub TabButton1_Click(sender As Object, e As EventArgs) Handles TabButton1.Click
-        'ParentForm.CreateNewTab()
-        'ParentForm.
+        'This tells the m_PlusButtonSource variable button to preform a click
+        'which will affect the linked button in the parent form
         m_PlusButtonSource.PerformClick()
     End Sub
 
