@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TabButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TabButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC45bDN+TgAAAD5JREFUOE/tzDEK
-        ACAMQ9FesPc/TsQhIOUPFd10eMsnJCQdwbgDo2WmptpXGO21A4+77h+QOiYY7R/0YOxTDOitzStwABLz
-        AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuOWwzfk4A
+        AABgSURBVEhL7c0xDgAgCARBP8j/n4OxoCGLGHN2FtNsAjfc/SmMShiVMCphVMKohLFiZr7kvoOx8gda
+        0oF4dirfB4wLPdnJ9wFjpXtGMFb+QOv5wA2MShiVMCphVMKo42MC+aqJp/dnt9AAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="WinMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

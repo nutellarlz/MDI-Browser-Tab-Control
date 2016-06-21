@@ -1909,6 +1909,21 @@ Public Class TabControl
         m_PlusButtonSource.PerformClick()
     End Sub
 
+    Private Sub TabButton1_MouseHover(sender As Object, e As EventArgs) Handles TabButton1.MouseHover
+        TabButton1.BackColor = SystemColors.ButtonHighlight
+    End Sub
+
+    Private Sub TabButton1_MouseDown(sender As Object, e As EventArgs) Handles TabButton1.MouseDown
+        TabButton1.BackColor = SystemColors.Control
+    End Sub
+
+    Private Sub TabButton1_MouseUp(sender As Object, e As EventArgs) Handles TabButton1.MouseUp
+        TabButton1.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub TabButton1_MouseLeave(sender As Object, e As EventArgs) Handles TabButton1.MouseLeave
+        TabButton1.BackColor = Color.Transparent
+    End Sub
 #End Region
 
 End Class
