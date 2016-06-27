@@ -1910,19 +1910,23 @@ Public Class TabControl
     End Sub
 
     Private Sub TabButton1_MouseHover(sender As Object, e As EventArgs) Handles TabButton1.MouseHover
-        TabButton1.BackColor = SystemColors.ButtonHighlight
+        'TabButton1.BackColor = SystemColors.ButtonHighlight
+        TabButton1.BackgroundImage = PictureBox1.Image
     End Sub
 
     Private Sub TabButton1_MouseDown(sender As Object, e As EventArgs) Handles TabButton1.MouseDown
-        TabButton1.BackColor = SystemColors.Control
+        'TabButton1.BackColor = Color.LightGray
+        TabButton1.BackgroundImage = PictureBox2.Image
     End Sub
 
     Private Sub TabButton1_MouseUp(sender As Object, e As EventArgs) Handles TabButton1.MouseUp
-        TabButton1.BackColor = Color.Transparent
+        'TabButton1.BackColor = Color.Transparent
+        TabButton1.BackgroundImage = Nothing
     End Sub
 
     Private Sub TabButton1_MouseLeave(sender As Object, e As EventArgs) Handles TabButton1.MouseLeave
-        TabButton1.BackColor = Color.Transparent
+        'TabButton1.BackColor = Color.Transparent
+        TabButton1.BackgroundImage = Nothing
     End Sub
 #End Region
 
