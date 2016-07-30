@@ -80,7 +80,7 @@ Partial Class TabControl
         Me.TabButton1.Image = CType(resources.GetObject("TabButton1.Image"), System.Drawing.Image)
         Me.TabButton1.Location = New System.Drawing.Point(3, 3)
         Me.TabButton1.Name = "TabButton1"
-        Me.TabButton1.Size = New System.Drawing.Size(23, 23)
+        Me.TabButton1.Size = New System.Drawing.Size(35, 25)
         Me.TabButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.TabButton1.TabIndex = 1
         Me.TabButton1.TabStop = False
