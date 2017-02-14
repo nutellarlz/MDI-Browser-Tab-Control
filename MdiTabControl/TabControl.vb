@@ -1578,7 +1578,7 @@ Public Class TabControl
             Else
                 Items(i).TabLeft = pnlControls.Left - x - Items(i).Width ' RTL Line
             End If
-            x += Items(i).Width + m_TabOffset - 1
+            x += Items(i).Width + m_TabOffset - 10
             'This is my code for a new tab button... hope it works
             If x < pnlControls.Location.X Then
                 TabButton1.Location = New Point(x, TabButton1.Location.Y)
@@ -1911,12 +1911,14 @@ Public Class TabControl
 
     Private Sub TabButton1_MouseHover(sender As Object, e As EventArgs) Handles TabButton1.MouseHover
         'TabButton1.BackColor = SystemColors.ButtonHighlight
-        TabButton1.BackgroundImage = PictureBox1.Image
+        'TabButton1.BackgroundImage = PictureBox1.Image
+        TabButton1.BackgroundImage = My.Resources.tabBG_full_2x
     End Sub
 
     Private Sub TabButton1_MouseDown(sender As Object, e As EventArgs) Handles TabButton1.MouseDown
         'TabButton1.BackColor = Color.LightGray
-        TabButton1.BackgroundImage = PictureBox2.Image
+        'TabButton1.BackgroundImage = PictureBox2.Image
+        TabButton1.BackgroundImage = My.Resources.tabBG_full_2x
     End Sub
 
     Private Sub TabButton1_MouseUp(sender As Object, e As EventArgs) Handles TabButton1.MouseUp
@@ -1927,6 +1929,14 @@ Public Class TabControl
     Private Sub TabButton1_MouseLeave(sender As Object, e As EventArgs) Handles TabButton1.MouseLeave
         'TabButton1.BackColor = Color.Transparent
         TabButton1.BackgroundImage = Nothing
+    End Sub
+
+    Private Sub TabButton1_MouseDown(sender As Object, e As MouseEventArgs) Handles TabButton1.MouseDown
+
+    End Sub
+
+    Private Sub TabButton1_MouseUp(sender As Object, e As MouseEventArgs) Handles TabButton1.MouseUp
+
     End Sub
 #End Region
 
