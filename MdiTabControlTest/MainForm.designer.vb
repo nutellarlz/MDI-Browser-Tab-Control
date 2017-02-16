@@ -21,12 +21,12 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Dim ToolStripProfessionalRenderer6 As System.Windows.Forms.ToolStripProfessionalRenderer = New System.Windows.Forms.ToolStripProfessionalRenderer()
         Dim ToolStripProfessionalRenderer1 As System.Windows.Forms.ToolStripProfessionalRenderer = New System.Windows.Forms.ToolStripProfessionalRenderer()
         Dim ToolStripProfessionalRenderer2 As System.Windows.Forms.ToolStripProfessionalRenderer = New System.Windows.Forms.ToolStripProfessionalRenderer()
         Dim ToolStripProfessionalRenderer3 As System.Windows.Forms.ToolStripProfessionalRenderer = New System.Windows.Forms.ToolStripProfessionalRenderer()
-        Dim ToolStripSystemRenderer2 As System.Windows.Forms.ToolStripSystemRenderer = New System.Windows.Forms.ToolStripSystemRenderer()
         Dim ToolStripProfessionalRenderer4 As System.Windows.Forms.ToolStripProfessionalRenderer = New System.Windows.Forms.ToolStripProfessionalRenderer()
+        Dim ToolStripSystemRenderer1 As System.Windows.Forms.ToolStripSystemRenderer = New System.Windows.Forms.ToolStripSystemRenderer()
+        Dim ToolStripProfessionalRenderer5 As System.Windows.Forms.ToolStripProfessionalRenderer = New System.Windows.Forms.ToolStripProfessionalRenderer()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,54 +38,56 @@ Partial Class MainForm
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TabControl7 = New MdiTabControl.TabControl()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl6 = New MdiTabControl.TabControl()
         Me.TabControl5 = New MdiTabControl.TabControl()
         Me.TabControl4 = New MdiTabControl.TabControl()
         Me.TabControl3 = New MdiTabControl.TabControl()
         Me.TabControl2 = New MdiTabControl.TabControl()
         Me.TabControl1 = New MdiTabControl.TabControl()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.RemoveToolStripMenuItem, Me.ChangePropertiesToolStripMenuItem, Me.AnimateIconToolStripMenuItem, Me.UntabToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(592, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(9, 3, 0, 3)
+        Me.MenuStrip1.Size = New System.Drawing.Size(888, 35)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'AddToolStripMenuItem
         '
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'RemoveToolStripMenuItem
         '
         Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
-        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(109, 20)
+        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(159, 29)
         Me.RemoveToolStripMenuItem.Text = "Remove Selected"
         '
         'ChangePropertiesToolStripMenuItem
         '
         Me.ChangePropertiesToolStripMenuItem.Name = "ChangePropertiesToolStripMenuItem"
-        Me.ChangePropertiesToolStripMenuItem.Size = New System.Drawing.Size(116, 20)
+        Me.ChangePropertiesToolStripMenuItem.Size = New System.Drawing.Size(169, 29)
         Me.ChangePropertiesToolStripMenuItem.Text = "Change Properties"
         '
         'AnimateIconToolStripMenuItem
         '
         Me.AnimateIconToolStripMenuItem.Name = "AnimateIconToolStripMenuItem"
-        Me.AnimateIconToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
+        Me.AnimateIconToolStripMenuItem.Size = New System.Drawing.Size(129, 29)
         Me.AnimateIconToolStripMenuItem.Text = "Animate Icon"
         '
         'UntabToolStripMenuItem
         '
         Me.UntabToolStripMenuItem.Name = "UntabToolStripMenuItem"
-        Me.UntabToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
+        Me.UntabToolStripMenuItem.Size = New System.Drawing.Size(70, 29)
         Me.UntabToolStripMenuItem.Text = "untab"
         '
         'Option1ToolStripMenuItem
@@ -96,9 +98,11 @@ Partial Class MainForm
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 438)
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 686)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(592, 22)
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(2, 0, 21, 0)
+        Me.StatusStrip1.Size = New System.Drawing.Size(888, 22)
         Me.StatusStrip1.TabIndex = 3
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -122,10 +126,11 @@ Partial Class MainForm
         '
         Me.TabControl7.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TabControl7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl7.Location = New System.Drawing.Point(0, 387)
+        Me.TabControl7.Location = New System.Drawing.Point(0, 594)
+        Me.TabControl7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl7.MenuRenderer = Nothing
         Me.TabControl7.Name = "TabControl7"
-        Me.TabControl7.Size = New System.Drawing.Size(592, 51)
+        Me.TabControl7.Size = New System.Drawing.Size(888, 92)
         Me.TabControl7.TabBorderEnhanceWeight = MdiTabControl.TabControl.Weight.Soft
         Me.TabControl7.TabCloseButtonImage = Nothing
         Me.TabControl7.TabCloseButtonImageDisabled = Nothing
@@ -135,14 +140,25 @@ Partial Class MainForm
         Me.TabControl7.TabPlusImage = Nothing
         Me.TabControl7.TabPlusVisable = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(684, 57)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 35)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'TabControl6
         '
         Me.TabControl6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TabControl6.Location = New System.Drawing.Point(0, 343)
-        ToolStripProfessionalRenderer6.RoundedEdges = True
-        Me.TabControl6.MenuRenderer = ToolStripProfessionalRenderer6
+        Me.TabControl6.Location = New System.Drawing.Point(0, 526)
+        Me.TabControl6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        ToolStripProfessionalRenderer1.RoundedEdges = True
+        Me.TabControl6.MenuRenderer = ToolStripProfessionalRenderer1
         Me.TabControl6.Name = "TabControl6"
-        Me.TabControl6.Size = New System.Drawing.Size(592, 44)
+        Me.TabControl6.Size = New System.Drawing.Size(888, 68)
         Me.TabControl6.TabBorderEnhanced = True
         Me.TabControl6.TabBorderEnhanceWeight = MdiTabControl.TabControl.Weight.Soft
         Me.TabControl6.TabCloseButtonImage = Global.MdiTabControlTest.My.Resources.Resources.Close
@@ -161,11 +177,12 @@ Partial Class MainForm
         Me.TabControl5.CloseButtonVisible = True
         Me.TabControl5.Dock = System.Windows.Forms.DockStyle.Top
         Me.TabControl5.DropButtonVisible = False
-        Me.TabControl5.Location = New System.Drawing.Point(0, 280)
-        ToolStripProfessionalRenderer1.RoundedEdges = True
-        Me.TabControl5.MenuRenderer = ToolStripProfessionalRenderer1
+        Me.TabControl5.Location = New System.Drawing.Point(0, 429)
+        Me.TabControl5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        ToolStripProfessionalRenderer2.RoundedEdges = True
+        Me.TabControl5.MenuRenderer = ToolStripProfessionalRenderer2
         Me.TabControl5.Name = "TabControl5"
-        Me.TabControl5.Size = New System.Drawing.Size(592, 63)
+        Me.TabControl5.Size = New System.Drawing.Size(888, 97)
         Me.TabControl5.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias
         Me.TabControl5.TabBorderEnhanced = True
         Me.TabControl5.TabBorderEnhanceWeight = MdiTabControl.TabControl.Weight.Soft
@@ -189,12 +206,13 @@ Partial Class MainForm
         '
         Me.TabControl4.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.TabControl4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TabControl4.Location = New System.Drawing.Point(0, 168)
-        ToolStripProfessionalRenderer2.RoundedEdges = True
-        Me.TabControl4.MenuRenderer = ToolStripProfessionalRenderer2
+        Me.TabControl4.Location = New System.Drawing.Point(0, 257)
+        Me.TabControl4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        ToolStripProfessionalRenderer3.RoundedEdges = True
+        Me.TabControl4.MenuRenderer = ToolStripProfessionalRenderer3
         Me.TabControl4.Name = "TabControl4"
         Me.TabControl4.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.TabControl4.Size = New System.Drawing.Size(592, 112)
+        Me.TabControl4.Size = New System.Drawing.Size(888, 172)
         Me.TabControl4.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality
         Me.TabControl4.TabBorderEnhanced = True
         Me.TabControl4.TabCloseButtonImage = Nothing
@@ -218,11 +236,12 @@ Partial Class MainForm
         Me.TabControl3.FontBoldOnSelect = False
         Me.TabControl3.ForeColorDisabled = System.Drawing.SystemColors.ControlDarkDark
         Me.TabControl3.HotTrack = False
-        Me.TabControl3.Location = New System.Drawing.Point(0, 126)
-        ToolStripProfessionalRenderer3.RoundedEdges = True
-        Me.TabControl3.MenuRenderer = ToolStripProfessionalRenderer3
+        Me.TabControl3.Location = New System.Drawing.Point(0, 192)
+        Me.TabControl3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        ToolStripProfessionalRenderer4.RoundedEdges = True
+        Me.TabControl3.MenuRenderer = ToolStripProfessionalRenderer4
         Me.TabControl3.Name = "TabControl3"
-        Me.TabControl3.Size = New System.Drawing.Size(592, 42)
+        Me.TabControl3.Size = New System.Drawing.Size(888, 65)
         Me.TabControl3.TabBackHighColorDisabled = System.Drawing.Color.Transparent
         Me.TabControl3.TabBackLowColor = System.Drawing.SystemColors.Window
         Me.TabControl3.TabBackLowColorDisabled = System.Drawing.Color.Transparent
@@ -245,10 +264,11 @@ Partial Class MainForm
         Me.TabControl2.BackLowColor = System.Drawing.Color.Transparent
         Me.TabControl2.CloseButtonVisible = True
         Me.TabControl2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TabControl2.Location = New System.Drawing.Point(0, 70)
-        Me.TabControl2.MenuRenderer = ToolStripSystemRenderer2
+        Me.TabControl2.Location = New System.Drawing.Point(0, 106)
+        Me.TabControl2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabControl2.MenuRenderer = ToolStripSystemRenderer1
         Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.Size = New System.Drawing.Size(592, 56)
+        Me.TabControl2.Size = New System.Drawing.Size(888, 86)
         Me.TabControl2.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed
         Me.TabControl2.TabBorderEnhanced = True
         Me.TabControl2.TabBorderEnhanceWeight = MdiTabControl.TabControl.Weight.Soft
@@ -273,11 +293,12 @@ Partial Class MainForm
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TabControl1.ForeColor = System.Drawing.Color.Maroon
         Me.TabControl1.ForeColorDisabled = System.Drawing.Color.IndianRed
-        Me.TabControl1.Location = New System.Drawing.Point(0, 24)
-        ToolStripProfessionalRenderer4.RoundedEdges = True
-        Me.TabControl1.MenuRenderer = ToolStripProfessionalRenderer4
+        Me.TabControl1.Location = New System.Drawing.Point(0, 35)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        ToolStripProfessionalRenderer5.RoundedEdges = True
+        Me.TabControl1.MenuRenderer = ToolStripProfessionalRenderer5
         Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.Size = New System.Drawing.Size(592, 46)
+        Me.TabControl1.Size = New System.Drawing.Size(888, 71)
         Me.TabControl1.TabBackHighColor = System.Drawing.SystemColors.Control
         Me.TabControl1.TabBackLowColorDisabled = System.Drawing.SystemColors.Control
         Me.TabControl1.TabBorderEnhanceWeight = MdiTabControl.TabControl.Weight.Soft
@@ -303,20 +324,11 @@ Partial Class MainForm
         Me.TabControl1.TabPlusImage = Nothing
         Me.TabControl1.TabPlusVisable = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(456, 37)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(592, 460)
+        Me.ClientSize = New System.Drawing.Size(888, 708)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl7)
         Me.Controls.Add(Me.TabControl6)
@@ -329,6 +341,7 @@ Partial Class MainForm
         Me.Controls.Add(Me.StatusStrip1)
         Me.KeyPreview = True
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MDI Tab Control Test"
