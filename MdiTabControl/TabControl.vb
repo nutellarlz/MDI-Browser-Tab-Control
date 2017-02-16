@@ -1578,10 +1578,10 @@ Public Class TabControl
             Else
                 Items(i).TabLeft = pnlControls.Left - x - Items(i).Width ' RTL Line
             End If
-            x += Items(i).Width + m_TabOffset - 10
+            x += Items(i).Width + m_TabOffset - 1
             'This is my code for a new tab button... hope it works
             If x < pnlControls.Location.X Then
-                TabButton1.Location = New Point(x, TabButton1.Location.Y)
+                TabButton1.Location = New Point(x - 9, TabButton1.Location.Y)
             Else
                 TabButton1.Location = New Point(TabButton1.Location.X, TabButton1.Location.Y)
             End If
